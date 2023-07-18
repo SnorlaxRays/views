@@ -23,12 +23,14 @@ TEMPLATE = os.path.join(BASE_DIR, 'cbv/template')
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-kxvgf3c9psp)zhsxi0t-75n4ss@r4ekj6#d*)r$@bknd&j6%r0"
+
+SECRET_KEY = os.environ["django-insecure-kxvgf3c9psp)zhsxi0t-75n4ss@r4ekj6#d*)r$@bknd&j6%r0"]
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['Dexter1996.pythonanywhere.com']
 
 
 # Application definition
