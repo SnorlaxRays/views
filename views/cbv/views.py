@@ -10,6 +10,7 @@ from django.views.generic.detail import DetailView
 class EmployeeCreate(CreateView):
     model = Employee
     fields = '__all__'
+    success_url = '/'  
     
 class EmployeeRetrieve(ListView):  
     model = Employee  
@@ -24,8 +25,9 @@ class EmployeeUpdate(UpdateView):
     template_name_suffix = '_update_form'  
     fields = '__all__'  
     success_url = reverse_lazy('cbv:EmployeeRetrieve')  
-      
-    # def get_success_url(self):  
+        
+    # def get_success_url(self):
+    #     return redirect('cbv:EmployeeRetrieve')
           
       
       
